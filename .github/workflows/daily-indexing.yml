@@ -1,0 +1,38 @@
+name: Daily Google Indexing for HEIC2PNG.Store
+run-name: ${{ github.actor }} is submitting URLs to Google 🚀
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Daily at 9 AM UTC
+  workflow_dispatch:  # Manual trigger button
+
+jobs:
+  submit-urls-to-google:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🔄 Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: 📦 Install dependencies
+        run: |
+          npm install googleapis axios xml2js
+          
+      - name: 🎯 Submit URLs to Google Indexing API
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          SITE_URL: 'https://heic2png.store'
+        run: |
+          node scripts/indexing.js
+          
+      - name: 📊 Upload logs as artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: indexing-logs
+          path: logs/
