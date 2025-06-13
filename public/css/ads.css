@@ -1,0 +1,309 @@
+/* AdSense Specific Styles */
+.ad-container {
+  margin: 20px auto;
+  text-align: center;
+  background: #f8f9ff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e0e6ff;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ad-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.ad-container.top-banner {
+  margin-top: 85px;
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  border: none;
+  border-radius: 0;
+  padding: 20px;
+}
+
+.ad-container.bottom-banner {
+  margin-bottom: 0;
+  background: #2c3e50;
+  border-color: #34495e;
+  color: white;
+}
+
+.ad-container.bottom-banner .ad-label {
+  color: #bdc3c7;
+}
+
+.ad-container.in-content {
+  margin: 50px auto;
+  max-width: 800px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+/* Sidebar Ad Styles */
+.sidebar-ad {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 110px;
+  border: 1px solid #e0e6ff;
+  transition: all 0.3s ease;
+}
+
+.sidebar-ad:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.sidebar-ad .ad-label {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Mobile Ad Optimizations */
+@media (max-width: 768px) {
+  .sidebar-ad {
+    order: 2;
+    position: static;
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  .ad-container {
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .ad-container.top-banner {
+    margin-top: 75px;
+    padding: 15px;
+  }
+
+  .ad-container.in-content {
+    padding: 15px;
+    margin: 30px auto;
+  }
+}
+
+/* Ad Loading States */
+.adsbygoogle {
+  min-height: 100px;
+  background: #f8f9ff;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.adsbygoogle:empty::before {
+  content: "Loading advertisement...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  font-size: 12px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Ad Hover Effects */
+.ad-container:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.ad-container:hover .ad-label {
+  opacity: 1;
+}
+
+/* Responsive Ad Sizes */
+@media (max-width: 480px) {
+  .ad-container {
+    padding: 8px;
+    margin: 10px auto;
+  }
+
+  .sidebar-ad {
+    padding: 12px;
+  }
+
+  .ad-container.top-banner {
+    padding: 10px;
+  }
+}
+
+/* Ad Performance Optimization */
+.ad-container {
+  will-change: transform;
+  contain: layout style paint;
+}
+
+/* Hide ads during conversion process */
+.converting .sidebar-ad {
+  opacity: 0.7;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.converting .sidebar-ad::after {
+  content: "Converting...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Ad spacing adjustments */
+.features+.ad-container.in-content {
+  margin-top: 60px;
+}
+
+.content-section+.ad-container {
+  margin-top: 40px;
+}
+
+/* Ad container animations */
+.ad-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Specific ad unit styles */
+.ad-container[data-ad-type="banner"] {
+  max-height: 120px;
+}
+
+.ad-container[data-ad-type="rectangle"] {
+  max-width: 336px;
+  max-height: 280px;
+}
+
+.ad-container[data-ad-type="leaderboard"] {
+  max-width: 728px;
+  max-height: 90px;
+}
+
+/* Ad error handling */
+.ad-error {
+  display: none;
+  color: #e74c3c;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+.ad-container.error .ad-error {
+  display: block;
+}
+
+.ad-container.error .adsbygoogle {
+  display: none;
+}
+
+/* Ad loading spinner */
+.ad-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.ad-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ad visibility tracking */
+.ad-container[data-visible="true"] {
+  background: rgba(102, 126, 234, 0.02);
+}
+
+/* Print styles - hide ads when printing */
+@media print {
+
+  .ad-container,
+  .sidebar-ad {
+    display: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .ad-container {
+    border: 2px solid #000;
+  }
+
+  .ad-label {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+  .ad-container,
+  .sidebar-ad,
+  .adsbygoogle {
+    animation: none;
+    transition: none;
+  }
+
+  .ad-container:hover {
+    transform: none;
+  }
+}

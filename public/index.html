@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEIC to PNG Converter - Free Online Image Converter Tool | heic2png.store</title>
+  <meta name="description"
+    content="Convert HEIC images to PNG format instantly. Free, secure, and fast online converter tool. No registration required. Works on all devices.">
+  <meta name="keywords"
+    content="heic to png, image converter, heic converter, png converter, online tool, free converter">
+  <meta name="author" content="HEIC2PNG Store">
+  <meta name="google-site-verification" content="7hP1dUlwkCqFyt8oqqc1uBskltwVBV19r13OY6WjfkA" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="HEIC to PNG Converter - Free Online Tool">
+  <meta property="og:description" content="Convert HEIC images to PNG format instantly. Free, secure, and fast.">
+  <meta property="og:url" content="https://heic2png.store">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://heic2png.store/images/blog/heic-format.jpg">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HEIC to PNG Converter">
+  <meta name="twitter:description" content="Convert HEIC images to PNG format instantly">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://heic2png.store">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23667eea'/><text x='16' y='16' font-family='Arial' font-size='16' fill='white' text-anchor='middle' dy='0.35em'>H→P</text></svg>">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous">
+
+  <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4166952431440537"
+    crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/ads.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HEIC to PNG Converter",
+        "url": "https://heic2png.store",
+        "description": "Free online tool to convert HEIC images to PNG format",
+        "applicationCategory": "Multimedia",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <i class="fas fa-exchange-alt brand-icon"></i>
+        <h1>HEIC2PNG.Store</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Top Banner Ad -->
+  <div class="ad-container top-banner">
+    <div class="ad-label">Advertisement</div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4166952431440537"
+      crossorigin="anonymous"></script>
+    <!-- Top Banner - heic2png -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4166952431440537" data-ad-slot="5612924295"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Convert HEIC to PNG Online - Free & Secure</h1>
+        <p class="hero-subtitle">Transform your iPhone HEIC images to PNG format instantly. Our advanced converter
+          maintains image quality while ensuring complete privacy.</p>
+
+        <div class="converter-layout">
+          <!-- Main Converter -->
+          <div class="converter-box">
+            <div class="upload-area" id="uploadArea">
+              <div class="upload-icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+              </div>
+              <h3>Drop HEIC files here or click to browse</h3>
+              <p>Supports multiple files • Max 50MB per file • 100% Privacy</p>
+              <input type="file" id="fileInput" accept=".heic,.heif" multiple>
+              <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                <i class="fas fa-folder-open btn-icon"></i>
+                Choose Files
+              </button>
+            </div>
+
+            <div class="conversion-progress" id="progressArea" style="display:none;">
+              <div class="progress-container">
+                <div class="progress-icon">
+                  <i class="fas fa-sync-alt fa-spin"></i>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="progress-text" id="progressText">Converting your images...</p>
+                <div class="conversion-stats" id="conversionStats"></div>
+              </div>
+            </div>
+
+            <div class="download-area" id="downloadArea" style="display:none;">
+              <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>Conversion Complete!</h3>
+              <p class="download-info">Your PNG files are ready for download</p>
+              <button class="download-btn" id="downloadBtn">
+                <i class="fas fa-download btn-icon"></i>
+                Download PNG Files
+              </button>
+              <button class="convert-more-btn" id="convertMoreBtn">
+                <i class="fas fa-plus btn-icon"></i>
+                Convert More Files
+              </button>
+            </div>
+          </div>
+
+          <!-- Sidebar Ad -->
+          <div class="sidebar-ad">
+            <div class="ad-label">Advertisement</div>
+            <script async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4166952431440537"
+              crossorigin="anonymous"></script>
+            <!-- Sidebar - heic2png -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4166952431440537"
+              data-ad-slot="5612924295" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose Our HEIC to PNG Converter?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>100% Secure & Private</h3>
+          <p>All conversions happen locally in your browser. Your files never leave your device, ensuring complete
+            privacy and security. No uploads, no data collection.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Lightning Fast Conversion</h3>
+          <p>Convert multiple HEIC files to PNG format in seconds. Advanced algorithms ensure quick processing without
+            compromising image quality.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Works on All Devices</h3>
+          <p>Perfect compatibility with desktop, tablet, and mobile devices. Convert your iPhone photos anywhere,
+            anytime with our responsive design.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h3>Completely Free Forever</h3>
+          <p>No hidden fees, no registration required, no watermarks. Convert unlimited HEIC files to PNG without any
+            restrictions or limitations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- In-Content Ad -->
+  <div class="ad-container in-content">
+    <div class="ad-label">Advertisement</div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4166952431440537"
+      crossorigin="anonymous"></script>
+    <!-- In-Content - heic2png -->
+    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+      data-ad-format="fluid" data-ad-client="ca-pub-4166952431440537" data-ad-slot="5612924295"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- Educational Content -->
+  <section class="content-section" id="about">
+    <div class="container">
+      <h2>Understanding HEIC and PNG Image Formats</h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <div class="content-icon">
+            <i class="fas fa-file-image"></i>
+          </div>
+          <h3>What is HEIC Format?</h3>
+          <p>HEIC (High Efficiency Image Container) is Apple's modern image format introduced with iOS 11 in 2017. It
+            offers superior compression algorithms that reduce file sizes by up to 50% compared to JPEG while
+            maintaining excellent image quality.</p>
+          <a href="blog/heic-format-explained.html" class="read-more">
+            <i class="fas fa-arrow-right"></i> Learn More About HEIC
+          </a>
+        </div>
+        <div class="content-card">
+          <div class="content-icon">
+            <i class="fas fa-images"></i>
+          </div>
+          <h3>Benefits of PNG Format</h3>
+          <p>PNG (Portable Network Graphics) is a widely supported lossless image format that works seamlessly across
+            all devices, platforms, and applications. It supports transparency and offers excellent image quality.</p>
+          <a href="blog/png-benefits.html" class="read-more">
+            <i class="fas fa-arrow-right"></i> Discover PNG Advantages
+          </a>
+        </div>
+        <div class="content-card">
+          <div class="content-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>When to Convert HEIC to PNG</h3>
+          <p>Convert your HEIC files to PNG when you need universal compatibility for sharing on social media, uploading
+            to websites, or using in applications that don't support HEIC format.</p>
+          <a href="blog/conversion-guide.html" class="read-more">
+            <i class="fas fa-arrow-right"></i> View Conversion Guide
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How Our HEIC to PNG Converter Works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">
+            <i class="fas fa-upload"></i>
+          </div>
+          <h3>Upload Your HEIC Files</h3>
+          <p>Drag and drop your HEIC images or click to browse and select multiple files. Our converter supports batch
+            processing for efficiency.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Automatic Conversion</h3>
+          <p>Our advanced algorithm processes your images locally in your browser, maintaining original quality while
+            converting to PNG format.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">
+            <i class="fas fa-download"></i>
+          </div>
+          <h3>Download PNG Files</h3>
+          <p>Download your converted PNG images individually or as a ZIP file. All processing happens securely on your
+            device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-icon">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <h3>Is it safe to convert HEIC files online?</h3>
+          <p>Absolutely! Our converter is 100% safe and secure. All image processing happens locally in your browser
+            using JavaScript, meaning your files never get uploaded to our servers.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-icon">
+            <i class="fas fa-image"></i>
+          </div>
+          <h3>Do I lose image quality when converting?</h3>
+          <p>No, you won't lose any image quality. Our converter maintains the original resolution, color depth, and
+            image clarity during the conversion process.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>How many HEIC files can I convert at once?</h3>
+          <p>You can convert multiple HEIC files simultaneously without any limits. Our batch conversion feature allows
+            you to process dozens of images at once.</p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-icon">
+            <i class="fas fa-devices"></i>
+          </div>
+          <h3>What devices and browsers are supported?</h3>
+          <p>Our converter works on all modern devices and browsers including Chrome, Firefox, Safari, and Edge. It's
+            compatible with Windows, Mac, iOS, and Android devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Banner Ad -->
+  <div class="ad-container bottom-banner">
+    <div class="ad-label">Advertisement</div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4166952431440537"
+      crossorigin="anonymous"></script>
+    <!-- Bottom Banner - heic2png -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4166952431440537" data-ad-slot="5612924295"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>
+            <i class="fas fa-exchange-alt"></i>
+            HEIC2PNG.Store
+          </h3>
+          <p>Your trusted online image conversion tool. Fast, secure, and completely free. Convert HEIC images to PNG
+            format with confidence and ease.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+            <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+            <li><a href="disclaimer.html"><i class="fas fa-exclamation-triangle"></i> Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 HEIC2PNG.Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/heic-converter.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/adsense.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+
+</html>
