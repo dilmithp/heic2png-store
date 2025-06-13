@@ -3,18 +3,9 @@
   "version": "1.0.0",
   "description": "GitHub Actions indexing for HEIC2PNG.Store",
   "main": "scripts/indexing.js",
-  "scripts": {
-    "index": "node scripts/indexing.js"
-  },
   "dependencies": {
     "googleapis": "^126.0.1",
     "axios": "^1.6.0",
     "xml2js": "^0.6.2"
-  },
-  "keywords": [
-    "google",
-    "indexing",
-    "heic2png"
-  ],
-  "author": "HEIC2PNG.Store"
+  }
 }

@@ -29,12 +29,3 @@ jobs:
           SITE_URL: 'https://heic2png.store'
         run: |
           node scripts/indexing.js
-          
-      - name: 📊 Upload logs as artifacts
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: indexing-logs-${{ github.run_number }}
-          path: logs/
-          retention-days: 30
-          compression-level: 6
